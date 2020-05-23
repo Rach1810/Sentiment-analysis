@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import keras
 from keras.preprocessing import sequence
@@ -85,9 +83,6 @@ prediction = model.predict(review)
 print(f'Prediction (0 = Negative, 1 = positive) = {prediction}')
 
 
-# In[107]:
-
-
 import xlrd
 d = imdb.get_word_index()
 exc1 = "Movies.xlsx"
@@ -121,16 +116,10 @@ for i in range(17):
     print(u)
 
 
-# In[43]:
-
-
 import pandas as pd
 df1 = pd.read_excel("Movies.xlsx")
 df1["rating"] = k
 df1
-
-
-# In[46]:
 
 
 c = 0
@@ -142,7 +131,6 @@ for i in k:
 print(c)
 
 
-# In[48]:
 
 
 import matplotlib.pyplot as plt
@@ -160,9 +148,6 @@ ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 plt.show()
 
 
-# In[156]:
-
-
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -171,23 +156,11 @@ df1.groupby(['Genre','rating']).size().unstack().plot(kind='bar',stacked=True, c
 plt.show()
 
 
-# In[108]:
-
-
 import pandas as pd
 df6 = pd.read_excel("Movies.xlsx")
 df6["predicted"] = u
 df7 = pd.DataFrame(df6)
 df6
-
-
-# In[ ]:
-
-
-
-
-
-# In[155]:
 
 
 import matplotlib.pyplot as plt
@@ -200,7 +173,7 @@ plt.ylabel('Sentiments')
 plt.show()
 
 
-# In[ ]:
+
 
 
 
